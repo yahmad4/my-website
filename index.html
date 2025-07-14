@@ -1,105 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Introduction to Cricket</title>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      font-size: 18px;
+    /* Base styles */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background-color: #f4f8fc;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
       color: #333;
+      line-height: 1.7;
     }
 
-    h1 {
-      font-size: 36px;
+    /* Header */
+    header {
+      background-color: #1e3a8a;
+      padding: 20px 0;
       text-align: center;
-      margin: 40px 0 10px;
-      color: #2a6ebd;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
+    header h1 {
+      font-size: 32px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Section styles */
     .section {
       background-color: white;
-      width: 80%;
-      max-width: 900px;
-      margin: 30px auto;
       padding: 30px;
+      margin-bottom: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    h2, h3 {
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
       font-size: 26px;
-      color: #1f4e79;
-      margin-top: 0;
+      color: #1e3a8a;
+      margin-bottom: 15px;
     }
 
-    p {
-      line-height: 1.8;
+    .section p {
+      font-size: 18px;
       margin-bottom: 20px;
     }
 
-    a {
-      font-size: 18px;
-      color: #2a6ebd;
+    .section a {
+      color: #1e40af;
       text-decoration: none;
-      word-break: break-all;
+      font-weight: 500;
+      word-break: break-word;
     }
 
-    a:hover {
+    .section a:hover {
       text-decoration: underline;
     }
 
-    img {
+    .section img {
       display: block;
-      margin: 20px auto;
       width: 100%;
       max-width: 750px;
-      border-radius: 8px;
+      margin: 20px auto 0;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e3a8a;
+      color: white;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .section h2 {
+        font-size: 22px;
+      }
+
+      .section p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>Introduction to Cricket</h1>
+  <header>
+    <h1>Introduction to Cricket</h1>
+  </header>
 
-  <div class="section">
-    <h2>What is Cricket</h2>
-    <p>
-      Cricket is a bat-and-ball sport played between two teams of eleven players. One team bats 
-      to score runs, while the other team bowls and fields to stop them. Players score runs by 
-      hitting the ball and running between the wickets, or by hitting boundaries. There are three 
-      main formats of cricket: Test matches, One Day Internationals (ODIs), and Twenty20 (T20). You can read more about this using the link below.
-    </p>
-    <a href="https://www.britannica.com/sports/cricket-sport" target="_blank">
-      https://www.britannica.com/sports/cricket-sport
-    </a>
-  </div>
+  <div class="container">
 
-  <div class="section">
-    <h3>Test Cricket</h3>
-    <p>
-      Test cricket is the longest and oldest format of the game. It is played between two national teams over five days, with each team batting twice (two innings). The format tests a team's skill and strategy. Unlike shorter formats like T20 or One Day Internationals, Test matches can end in a win, loss, draw, or tie. The matches are played using a red ball, and players wear white uniforms. Test cricket is considered the ultimate test of a cricketer's ability.
-    </p>
-    <img src="Test Cricket.jpg" alt="Test Cricket">
-  </div>
+    <div class="section">
+      <h2>What is Cricket?</h2>
+      <p>
+        Cricket is a bat-and-ball sport played between two teams of eleven players. One team bats 
+        to score runs, while the other team bowls and fields to stop them. Players score runs by 
+        hitting the ball and running between the wickets, or by hitting boundaries. There are three 
+        main formats of cricket: Test matches, One Day Internationals (ODIs), and Twenty20 (T20).
+      </p>
+      <a href="https://www.britannica.com/sports/cricket-sport" target="_blank">
+        Read more on Britannica
+      </a>
+    </div>
 
-  <div class="section">
-    <h2>One Day Cricket</h2>
-    <p>
-      ODI stands for One Day International, a limited-overs format of cricket played between two national teams. In an ODI match, each team gets to bat for a maximum of 50 overs. The team that scores more runs wins the game. Unlike Test matches, which last up to five days, ODIs are completed in a single day and are known for being more fast-paced and exciting. ODI cricket uses a white ball, and players wear colored uniforms. This format is used in major tournaments like the ICC Cricket World Cup, and it combines strategy, skill, and entertainment, making it one of the most popular formats in international cricket.
-    </p>
-  </div>
+    <div class="section">
+      <h2>Test Cricket</h2>
+      <p>
+        Test cricket is the longest and oldest format of the game. It is played between two national teams over five days, with each team batting twice (two innings). The format tests a team's skill and strategy. Unlike shorter formats like T20 or One Day Internationals, Test matches can end in a win, loss, draw, or tie. The matches are played using a red ball, and players wear white uniforms. Test cricket is considered the ultimate test of a cricketer's ability.
+      </p>
+      <img src="Test Cricket.jpg" alt="Test Cricket">
+    </div>
 
-  <div class="section">
-    <h2>T20 Cricket</h2>
-    <p>
-      T20 cricket, also known as Twenty20 cricket, is the shortest official format of the game. Each team gets to bat for a maximum of 20 overs, making the match last about three hours. T20 matches are known for their fast pace, big hitting, and high energy. This format is especially popular with younger audiences and is often played under floodlights in stadiums with lively crowds. Players wear colored uniforms, and the matches are played with a white ball. T20 cricket is used in international competitions as well as popular leagues like the Indian Premier League (IPL) and the Big Bash League (BBL).
-    </p>
-  </div>
+    <div class="section">
+      <h2>One Day Cricket (ODI)</h2>
+      <p>
+        ODI stands for One Day International, a limited-overs format of cricket played between two national teams. In an ODI match, each team gets to bat for a maximum of 50 overs. The team that scores more runs wins the game. Unlike Test matches, ODIs are completed in a single day and are known for being more fast-paced and exciting. Players wear colored uniforms, and this format is used in major tournaments like the ICC Cricket World Cup.
+      </p>
+    </div>
 
-</body>
-</html>
+    <div class="section">
+      <h2>T20 Cricket</h2>
+      <p>
+        T20 cricket, also known as Twenty20 cricket, is the shortest official format of the game. Each team gets to bat for a maximum of 20 overs, making the match last about three hours. T20 matches are known for their fast pace, big hitting, and high energy. This format is especially popular with younger audiences and is often played under floodlights in stadiums with lively crowds. Players wear colored uniforms, and the matches are played with a white ball. T20 cricket is used in international competitions as well as popular leagues like the Indian Premier League (IPL) and the Big Bash League (BBL). 
