@@ -1,0 +1,122 @@
+:root {
+    --primary: #0d47a1;
+    --accent: #1e88e5;
+    --bg: #f5f8fc;
+    --text: #212121;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  nav {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--accent);
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+  
+  .main-heading {
+    text-align: center;
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 40px;
+    scroll-margin-top: 100px;
+  }
+  
+  .section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    scroll-margin-top: 100px;
+  }
+  
+  .section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--primary);
+  }
+  
+  .section p {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+  
+  .section img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .button-link {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .button-link:hover {
+    background-color: var(--accent);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 600px) {
+    .section h2 {
+      font-size: 20px;
+    }
+  
+    .section p {
+      font-size: 15px;
+    }
+  }
+  
