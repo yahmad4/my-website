@@ -3,101 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction to Cricket</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <title>Cricket Explained</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Base styles */
+    :root {
+      --primary: #0d47a1;
+      --secondary: #ffffff;
+      --accent: #1976d2;
+      --bg: #f4f6f9;
+      --text: #2c3e50;
+    }
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f0f4f8;
-      color: #333;
-      line-height: 1.7;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
     }
 
-    /* Header */
     header {
-      background-color: #1e3a8a;
-      padding: 20px 0;
-      text-align: center;
+      background: linear-gradient(to right, #0d47a1, #1976d2);
       color: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 60px 20px;
+      text-align: center;
     }
 
     header h1 {
-      font-size: 32px;
+      font-size: 48px;
+      font-weight: 700;
     }
 
-    /* Container */
+    nav {
+      background-color: white;
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
+      max-width: 1100px;
+      margin: 60px auto;
       padding: 0 20px;
     }
 
-    /* Section styles */
     .section {
       background-color: white;
-      padding: 30px;
-      margin-bottom: 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      padding: 40px;
+      margin-bottom: 50px;
+      transition: all 0.3s ease;
     }
 
     .section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
     }
 
     .section h2 {
-      font-size: 26px;
-      color: #1e3a8a;
-      margin-bottom: 15px;
+      font-size: 30px;
+      color: var(--primary);
+      margin-bottom: 20px;
     }
 
     .section p {
       font-size: 18px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
-    .section a {
-      color: #1e40af;
+    .button-link {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: 500;
-      word-break: break-word;
+      transition: background-color 0.3s ease;
     }
 
-    .section a:hover {
-      text-decoration: underline;
+    .button-link:hover {
+      background-color: var(--accent);
     }
 
     .section img {
       display: block;
-      width: 100%;
-      max-width: 750px;
-      margin: 20px auto 0;
-      border-radius: 10px;
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 30px auto 0;
     }
 
-    /* Footer */
     footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1e3a8a;
+      background-color: var(--primary);
       color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 80px;
       font-size: 14px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 36px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
       .section h2 {
-        font-size: 22px;
+        font-size: 24px;
       }
 
       .section p {
@@ -109,12 +149,18 @@
 <body>
 
   <header>
-    <h1>Introduction to Cricket</h1>
+    <h1>Cricket Explained</h1>
   </header>
 
-  <div class="container">
+  <nav>
+    <a href="#what">What is Cricket</a>
+    <a href="#test">Test</a>
+    <a href="#odi">ODI</a>
+    <a href="#t20">T20</a>
+  </nav>
 
-    <div class="section">
+  <main class="container">
+    <section class="section" id="what">
       <h2>What is Cricket?</h2>
       <p>
         Cricket is a bat-and-ball sport played between two teams of eleven players. One team bats 
@@ -122,27 +168,35 @@
         hitting the ball and running between the wickets, or by hitting boundaries. There are three 
         main formats of cricket: Test matches, One Day Internationals (ODIs), and Twenty20 (T20).
       </p>
-      <a href="https://www.britannica.com/sports/cricket-sport" target="_blank">
-        Read more on Britannica
-      </a>
-    </div>
+      <a href="https://www.britannica.com/sports/cricket-sport" target="_blank" class="button-link">Learn More</a>
+    </section>
 
-    <div class="section">
+    <section class="section" id="test">
       <h2>Test Cricket</h2>
       <p>
-        Test cricket is the longest and oldest format of the game. It is played between two national teams over five days, with each team batting twice (two innings). The format tests a team's skill and strategy. Unlike shorter formats like T20 or One Day Internationals, Test matches can end in a win, loss, draw, or tie. The matches are played using a red ball, and players wear white uniforms. Test cricket is considered the ultimate test of a cricketer's ability.
+        Test cricket is the longest and oldest format of the game. It is played between two national teams over five days, with each team batting twice (two innings). The format tests a team's skill and strategy. Unlike shorter formats, Test matches can end in a win, loss, draw, or tie. They are played using a red ball, and players wear white uniforms.
       </p>
-      <img src="Test Cricket.jpg" alt="Test Cricket">
-    </div>
+      <img src="Test Cricket.jpg" alt="Test Cricket Image">
+    </section>
 
-    <div class="section">
+    <section class="section" id="odi">
       <h2>One Day Cricket (ODI)</h2>
       <p>
-        ODI stands for One Day International, a limited-overs format of cricket played between two national teams. In an ODI match, each team gets to bat for a maximum of 50 overs. The team that scores more runs wins the game. Unlike Test matches, ODIs are completed in a single day and are known for being more fast-paced and exciting. Players wear colored uniforms, and this format is used in major tournaments like the ICC Cricket World Cup.
+        ODI stands for One Day International, a limited-overs format of cricket played between two national teams. Each team gets to bat for a maximum of 50 overs. The team that scores more runs wins the game. ODIs are known for being fast-paced and exciting, played with a white ball and colorful uniforms.
       </p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section" id="t20">
       <h2>T20 Cricket</h2>
       <p>
-        T20 cricket, also known as Twenty20 cricket, is the shortest official format of the game. Each team gets to bat for a maximum of 20 overs, making the match last about three hours. T20 matches are known for their fast pace, big hitting, and high energy. This format is especially popular with younger audiences and is often played under floodlights in stadiums with lively crowds. Players wear colored uniforms, and the matches are played with a white ball. T20 cricket is used in international competitions as well as popular leagues like the Indian Premier League (IPL) and the Big Bash League (BBL). 
+        T20 cricket is the shortest official format. Each team bats for just 20 overs, making the match last about three hours. It’s known for big hits, fast pace, and entertainment. Popular among younger fans, T20 is the format used in IPL, BBL, and international T20 tournaments.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Cricket Insights. Designed by You.
+  </footer>
+
+</body>
+</html>
