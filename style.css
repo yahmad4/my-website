@@ -325,35 +325,57 @@ body.dark .section {
 }
 
 .dark-toggle {
-  position: fixed;
-  top: 18px;
+  position: fixed !important;
+  top: 16px;
   right: 16px;
-  width: 46px;
-  height: 46px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background: var(--primary);
   color: #fff;
   border: none;
-  z-index: 1100;
-  box-shadow: 0 2px 18px rgba(10,20,60,0.06);
+  z-index: 10050;
+  box-shadow: 0 2px 12px rgba(10,20,60,0.10);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.65em;
-  transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+  font-size: 1.2em;
+  transition: background 0.3s;
 }
 .dark-toggle:hover {
   background: var(--accent);
   color: #fff;
 }
-
 @media (max-width: 600px) {
   .dark-toggle {
-    width: 38px;
-    height: 38px;
-    font-size: 1.28em;
-    top: 8px;
-    right: 10px;
+    top: 9px;
+    right: 9px;
+    width: 29px;
+    height: 29px;
+    font-size: 1em;
   }
+}
+
+.dark-toggle {
+  position: fixed !important;
+  top: 10px !important;
+  right: 10px !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  background: var(--primary) !important;
+  color: #fff !important;
+  border: none !important;
+  z-index: 10050 !important;
+  box-shadow: 0 2px 8px rgba(10,20,60,0.12) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1em !important;
+  padding: 0 !important;
+  min-width: unset !important;
+  min-height: unset !important;
+  transition: background 0.3s !important;
 }
