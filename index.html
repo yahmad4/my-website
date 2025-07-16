@@ -3,68 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction to Cricket</title>
+  <title>Cricket Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav>
-    <a href="#main-title">What is Cricket</a>
-    <a href="#test">Test</a>
-    <a href="#odi">ODI</a>
-    <a href="#t20">T20</a>
-  </nav>
+   <canvas id="particles-bg" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;"></canvas>
 
+  <button class="dark-toggle" id="darkToggle">
+    <span style="margin-right:8px;">🌙</span> Toggle Dark Mode
+  </button>
+  <header>
+    <h1>Introduction to Cricket</h1>
+    <nav>
+      <a href="#what">What is Cricket</a>
+      <a href="#test">Test</a>
+      <a href="#odi">ODI</a>
+      <a href="#t20">T20</a>
+    </nav>
+  </header>
   <div class="container">
-    <h1 class="main-heading" id="main-title">Introduction to Cricket</h1>
-
-    <div class="section" id="what">
+    <section class="section" id="what">
       <h2>What is Cricket?</h2>
       <p>
-        Cricket is a bat-and-ball sport played between two teams of eleven players. One team bats to score runs,
-        while the other team bowls and fields to stop them. Players score runs by hitting the ball and running between
-        the wickets or by hitting boundaries. There are three main formats of cricket: Test matches, One Day
-        Internationals (ODIs), and Twenty20 (T20).
+        Cricket is a bat-and-ball sport played between two teams of eleven players. One team bats to score runs, while the other team bowls and fields to stop them. Players score runs by hitting the ball and running between the wickets or by hitting boundaries. There are three main formats of cricket: Test matches, One Day Internationals (ODIs), and Twenty20 (T20).
       </p>
-      <a href="https://www.britannica.com/sports/cricket-sport" target="_blank" class="button-link">Read More</a>
-    </div>
-
-    <div class="section" id="test">
+      <a href="https://www.britannica.com/sports/cricket-sport" target="_blank" class="learn-more">Read More</a>
+    </section>
+    <section class="section" id="test">
       <h2>Test Cricket</h2>
-      <p>
-        Test cricket is the longest and oldest format of the game. It is played between two national teams over five days,
-        with each team batting twice (two innings). The format tests a team's skill and strategy. Unlike shorter formats like
-        T20 or One Day Internationals, Test matches can end in a win, loss, draw, or tie. The matches are played using a red ball,
-        and players wear white uniforms. Test cricket is considered the ultimate test of a cricketer's ability.
-      </p>
+      <p>Test cricket is the longest and oldest format of the game. It is played between two national teams over five days, with each team batting twice (two innings). The format tests a team's skill and strategy. Unlike shorter formats like T20 or One Day Internationals, Test matches can end in a win, loss, draw, or tie. The matches are played using a red ball, and players wear white uniforms. Test cricket is considered the ultimate test of a cricketer's ability.</p>
       <img src="Test Cricket.jpg" alt="Test Cricket">
-    </div>
-
-    <div class="section" id="odi">
+    </section>
+    <section class="section" id="odi">
       <h2>One Day Cricket (ODI)</h2>
-      <p>
-        ODI stands for One Day International, a limited-overs format of cricket played between two national teams.
-        In an ODI match, each team gets to bat for a maximum of 50 overs. The team that scores more runs wins the game.
-        Unlike Test matches, ODIs are completed in a single day and are known for being more fast-paced and exciting.
-        Players wear colored uniforms, and this format is used in major tournaments like the ICC Cricket World Cup.
-      </p>
-    </div>
-
-    <div class="section" id="t20">
+      <p>ODI stands for One Day International, a limited-overs format of cricket played between two national teams. In an ODI match, each team gets to bat for a maximum of 50 overs. The team that scores more runs wins the game. Unlike Test matches, ODIs are completed in a single day and are known for being more fast-paced and exciting. Players wear colored uniforms, and this format is used in major tournaments like the ICC Cricket World Cup.</p>
+    </section>
+    <section class="section" id="t20">
       <h2>T20 Cricket</h2>
-      <p>
-        T20 cricket, also known as Twenty20 cricket, is the shortest official format of the game.
-        Each team gets to bat for a maximum of 20 overs, making the match last about three hours.
-        T20 matches are known for fast action, big hitting, and loud crowds.
-        This format is especially popular with younger audiences and is used in international matches and leagues like the IPL and BBL.
-      </p>
-    </div>
+      <p>T20 cricket, also known as Twenty20 cricket, is the shortest official format of the game. Each team gets to bat for a maximum of 20 overs, making the match last about three hours. T20 matches are known for fast action, big hitting, and loud crowds. This format is especially popular with younger audiences and is used in international matches and leagues like the IPL and BBL.</p>
+    </section>
   </div>
-
   <footer>
-    &copy; 2025 Introduction to Cricket. All rights reserved.
+    &copy; 2025 Cricket Website. All rights reserved.
   </footer>
-
+ <script src="script.js"></script>
 </body>
 </html>
